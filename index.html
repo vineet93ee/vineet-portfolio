@@ -5,8 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Vineet Sharma | Principal DevOps & Automation Engineer</title>
 
-  <!-- AOS Animation Library -->
+  <!-- AOS Animation -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <!-- Devicon Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
 
   <style>
     body {
@@ -25,9 +28,8 @@
     }
 
     header h1 {
-      margin: 0;
       font-size: 2.8rem;
-      letter-spacing: 1px;
+      margin: 0;
     }
 
     header p {
@@ -47,42 +49,64 @@
 
     h2 {
       color: #1e3c72;
-      margin-bottom: 1.2rem;
       border-bottom: 2px solid #eee;
       padding-bottom: 0.4rem;
+      margin-bottom: 1.2rem;
     }
 
     .subtitle {
-      font-size: 1.05rem;
       color: #555;
+      font-size: 1.05rem;
       margin-bottom: 1.5rem;
     }
 
-    .badges {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.6rem;
+    /* Skill Cards */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+      gap: 1.4rem;
+      margin-top: 1.5rem;
     }
 
-    .badge {
-      background: #e1ecf4;
-      color: #0366d6;
-      padding: 0.45rem 0.9rem;
-      border-radius: 20px;
-      font-size: 0.9rem;
-      transition: transform 0.2s ease;
+    .skill-card {
+      background: #f9fbfd;
+      border-radius: 12px;
+      padding: 1.4rem 1rem;
+      text-align: center;
+      transition: all 0.3s ease;
+      animation: float 4s ease-in-out infinite;
     }
 
-    .badge:hover {
-      transform: scale(1.05);
+    .skill-card:hover {
+      transform: translateY(-8px) scale(1.05);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+
+    .skill-card i {
+      font-size: 3rem;
+      color: #2a5298;
+      margin-bottom: 0.6rem;
+    }
+
+    .skill-card span {
+      display: block;
+      font-size: 0.95rem;
+      font-weight: 600;
+      margin-top: 0.4rem;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-6px); }
+      100% { transform: translateY(0); }
     }
 
     .card {
       background: #fafafa;
       padding: 1.5rem;
       border-radius: 12px;
-      margin-bottom: 1.4rem;
       border-left: 4px solid #2a5298;
+      margin-bottom: 1.4rem;
     }
 
     .card strong {
@@ -91,9 +115,9 @@
 
     footer {
       text-align: center;
-      font-size: 0.9rem;
       margin: 3rem 0;
       color: #777;
+      font-size: 0.9rem;
     }
 
     .cta {
@@ -111,53 +135,38 @@
   <h1>Vineet Sharma</h1>
   <p>
     Principal DevOps & Automation Engineer<br>
-    Automating Enterprise Infrastructure using Ansible AAP, Jenkins, Terraform & Azure
+    Building Enterprise-Scale Automation with Ansible AAP, Jenkins, Terraform & DevOps Tools
   </p>
 </header>
 
 <section data-aos="fade-up">
   <h2>About Me</h2>
-  <p class="subtitle">
-    9+ years of experience building scalable, secure, and enterprise-grade automation platforms.
+  <p class="subtitle">9+ years of experience delivering scalable, secure automation platforms.</p>
+  <p>
+    I am a Principal DevOps & Automation Engineer focused on converting complex, manual
+    infrastructure and operational workflows into fully automated, auditable, and scalable systems.
   </p>
   <p>
-    I am a Principal DevOps & Automation Engineer specializing in transforming manual, complex
-    infrastructure and operational workflows into fully automated, repeatable, and auditable solutions.
-    My expertise spans cloud, hybrid, and on-prem environments across Linux and Windows ecosystems.
+    My experience spans CI/CD pipelines, Infrastructure as Code, ERP deployments,
+    Active Directory automation, and Ansible Automation Platform operations
+    across cloud, hybrid, and on-prem environments.
   </p>
-  <p>
-    I have led automation initiatives covering CI/CD pipelines, Infrastructure as Code, ERP deployments,
-    Active Directory automation, and Ansible Automation Platform operations for enterprise and
-    government-scale environments.
-  </p>
-</section>
-
-<section data-aos="fade-up">
-  <h2>What I Do Best</h2>
-  <ul>
-    <li>Enterprise Automation Architecture (Ansible Automation Platform, Tower, AWX)</li>
-    <li>CI/CD Pipeline Design & Governance (Jenkins, Azure DevOps)</li>
-    <li>Infrastructure as Code (Terraform, Packer)</li>
-    <li>Linux & Windows Automation (Ansible, PowerShell, Bash)</li>
-    <li>ITSM, CMDB & Identity Integrations (ServiceNow, Remedy, LDAP, AD)</li>
-    <li>Security, RBAC, Compliance & Disaster Recovery Automation</li>
-  </ul>
 </section>
 
 <section data-aos="fade-up">
   <h2>Technical Skills</h2>
-  <div class="badges">
-    <span class="badge">Ansible / AAP</span>
-    <span class="badge">Terraform</span>
-    <span class="badge">Jenkins</span>
-    <span class="badge">Azure</span>
-    <span class="badge">Docker</span>
-    <span class="badge">Kubernetes</span>
-    <span class="badge">PowerShell</span>
-    <span class="badge">Python</span>
-    <span class="badge">Bash</span>
-    <span class="badge">CI/CD</span>
-    <span class="badge">ServiceNow</span>
+
+  <div class="skills-grid">
+    <div class="skill-card"><i class="devicon-ansible-plain"></i><span>Ansible / AAP</span></div>
+    <div class="skill-card"><i class="devicon-terraform-plain"></i><span>Terraform</span></div>
+    <div class="skill-card"><i class="devicon-jenkins-line"></i><span>Jenkins</span></div>
+    <div class="skill-card"><i class="devicon-azure-plain"></i><span>Azure</span></div>
+    <div class="skill-card"><i class="devicon-docker-plain"></i><span>Docker</span></div>
+    <div class="skill-card"><i class="devicon-kubernetes-plain"></i><span>Kubernetes</span></div>
+    <div class="skill-card"><i class="devicon-powershell-plain"></i><span>PowerShell</span></div>
+    <div class="skill-card"><i class="devicon-python-plain"></i><span>Python</span></div>
+    <div class="skill-card"><i class="devicon-linux-plain"></i><span>Linux / Bash</span></div>
+    <div class="skill-card"><i class="devicon-git-plain"></i><span>CI/CD & Git</span></div>
   </div>
 </section>
 
@@ -167,37 +176,25 @@
   <div class="card">
     <strong>Deltek Costpoint – Enterprise CI/CD Automation</strong>
     <p>
-      Architected Jenkins and Ansible-driven CI/CD pipelines to automate build, deployment,
-      validation, and rollback of ERP modules across environments.
-      Integrated ServiceNow CMDB for data-driven deployments, improving reliability,
-      audit readiness, and release consistency.
+      Architected Jenkins and Ansible-driven CI/CD pipelines to automate ERP deployments,
+      validation, and rollback across environments. Integrated ServiceNow CMDB to enable
+      data-driven, auditable releases.
     </p>
   </div>
 
   <div class="card">
-    <strong>Government Cloud Automation (HCL)</strong>
+    <strong>HCLSoftware – End to End Cloud Automation</strong>
     <p>
-      Designed Ansible Tower-based automation for IaaS provisioning and day-2 operations
-      across secure on-prem environments. Integrated LDAP and Remedy to enable
-      RBAC-controlled, ticket-driven automation.
+      Built Ansible Tower-based automation for secure IaaS provisioning and day-2 operations.
+      Integrated LDAP and Remedy for RBAC-controlled, ticket-driven automation workflows.
     </p>
   </div>
 
   <div class="card">
     <strong>Enterprise Active Directory Automation</strong>
     <p>
-      Built end-to-end AD automation for onboarding, offboarding, access control,
-      and password governance using Ansible and ServiceNow, reducing manual effort
-      and improving compliance.
-    </p>
-  </div>
-
-  <div class="card">
-    <strong>Hybrid Cloud Automation (Azure & Linux)</strong>
-    <p>
-      Implemented Terraform-based provisioning for Azure and Linux workloads,
-      integrated Splunk deployment via Ansible, and led OS security hardening
-      initiatives for enterprise environments.
+      Delivered end-to-end AD automation for onboarding, offboarding, and access governance
+      using Ansible and ServiceNow, significantly reducing manual effort and errors.
     </p>
   </div>
 
@@ -218,7 +215,7 @@
   <p>Location: India</p>
 
   <p class="cta">
-    Looking for a Senior / Principal DevOps or Automation Engineer?<br>
+    Looking for a Senior / Principal DevOps Engineer?<br>
     Let’s build scalable automation together.
   </p>
 </section>
@@ -229,12 +226,8 @@
 
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
-  AOS.init({
-    duration: 900,
-    once: true
-  });
+  AOS.init({ duration: 900, once: true });
 </script>
 
 </body>
 </html>
-
